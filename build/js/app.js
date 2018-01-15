@@ -36,6 +36,7 @@ var Query = exports.Query = function () {
 					console.log("API CONNECTED. You did it!");
 					var results = [];
 
+					//push data returned from API into one array
 					console.log("response length : " + response.data.length);
 					for (var i = 0; i < response.data.length; i++) {
 						results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name);
@@ -70,9 +71,7 @@ $(document).ready(function () {
 		console.log(newQuery);
 
 		newQuery.getQuery(function (results) {
-
-			for (var i = 0; i < results.length; i++) {}
-			$('#output').append('<li>' + results + '</li>');
+			console.log(results);
 		}, function (error) {
 			$('#output1').text('NO API CONNECTION. There was an error processing your search. Please try again.');
 		});

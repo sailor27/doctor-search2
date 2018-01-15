@@ -16,6 +16,7 @@ export class Query {
 				console.log("API CONNECTED. You did it!");
 				let results = [];
 
+//push data returned from API into one array
 				console.log("response length : " + response.data.length);
 				for (var i = 0; i < response.data.length; i++){
 					results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name);
