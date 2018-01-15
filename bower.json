@@ -1,0 +1,21 @@
+{
+  "name": "doctor-search",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Sailor Winkelman sailorwinkelman@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sailor27/shapeplay",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7"
+  }
+}
