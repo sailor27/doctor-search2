@@ -1,5 +1,5 @@
 var apiKey = require('./../.env').apiKey;
-// var searchLimit = 40;
+
 export class Query {
 	constructor(condition, doctor) {
 		this.condition = condition;

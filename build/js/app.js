@@ -13,7 +13,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var apiKey = require('./../.env').apiKey;
-// var searchLimit = 40;
 
 var Query = exports.Query = function () {
 	function Query(condition, doctor) {
@@ -88,6 +87,10 @@ $(document).ready(function () {
 		newQuery.getQuery(function (results) {
 			$('#output').empty();
 			console.log(results);
+			if (results.length < 1) {
+				$("#output").append("Your search returned 0 results. Please try a different search term.");
+			}
+
 			for (var i = 0; i < results.length; i++) {
 				$("#output").append('<li> ' + results[i] + ' </li>');
 			}
