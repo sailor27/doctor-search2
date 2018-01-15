@@ -13,15 +13,17 @@ $(document).ready(function() {
 
 		newQuery.getQuery(function(results) {
 			$('#output').empty();
+			$('#output1').empty();
+			$('#output2').empty();
 
 			if (results.length < 1){
-				$("#output").append("Your search for " + condition + " " + doctor + " returned 0 results. Please try a different search term.");
+				$("#output").append("Your search for " + "\"" + condition + "\"" + " " + "\"" + doctor + "\"" + " returned 0 results. Please try a different search term.");
 			} else {
-				$("#output").append("Your search for " + condition + " " + doctor + "returned  " + results.length + " results");
+				$("#output").append("Your search for " + "\"" + condition+ "\"" + " " + "\"" + doctor + "\"" + "returned  " + results.length + " results");
 			}
 
 			for (var i = 0; i < results.length; i++){
-				$("#output").append(`<li> ${results[i]} </li>`);
+				$("#output2").append(`<ul><li> ${results[i]} </li></ul>`);
 			}
 
 		},
