@@ -4,7 +4,7 @@
   "description": "Search doctors using the BetterDoctor API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "karma start karma.conf.js"
   },
   "dependencies": {
     "gulp": "^3.9.1"
@@ -38,12 +38,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sailor27/doctor-search.git"
+    "url": "git+https://github.com/sailor27/doctor-search2.git"
   },
   "author": "Sailor Winkelman sailorwinkelman@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sailor27/doctor-search/issues"
+    "url": "https://github.com/sailor27/doctor-search2/issues"
   },
-  "homepage": "https://github.com/sailor27/doctor-search#readme"
+  "homepage": "https://github.com/sailor27/doctor-search2#readme"
 }

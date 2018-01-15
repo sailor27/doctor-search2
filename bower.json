@@ -1,12 +1,12 @@
 {
-  "name": "doctor-search",
+  "name": "doctor-search2",
   "description": "",
   "main": "index.js",
   "authors": [
     "Sailor Winkelman sailorwinkelman@gmail.com"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/sailor27/shapeplay",
+  "homepage": "https://github.com/sailor27/doctor-search2.git",
   "ignore": [
     "**/.*",
     "node_modules",
