@@ -38,13 +38,6 @@ The following tools were used to create this project:
 [karma](https://karma-runner.github.io/2.0/index.html) : unit testing
 ```
 
-```
-[moment](https://momentjs.com/) : date and time formatting
-```
-
-```
-[bootstrap](https://momentjs.com/) : basic styling
-```
 
 * HTML
 * CSS

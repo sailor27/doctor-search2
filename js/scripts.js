@@ -24,7 +24,7 @@ export class Query {
 
 					if (response.data[i].practices[0].accepts_new_patients){
 						var patients = "Accepting New Patients";
-						console.log(patients);
+						
 					} else {
 						var patients = "Not Accepting New Patients";
 					}
@@ -39,7 +39,7 @@ export class Query {
 
 
 				} //end for loop
-				console.log("results array: " + results);
+
 				success(results);
 	    },
 	    error: function(response) {

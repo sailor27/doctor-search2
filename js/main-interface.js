@@ -13,11 +13,13 @@ $(document).ready(function() {
 
 		newQuery.getQuery(function(results) {
 			$('#output').empty();
-			console.log(results);
+
 			if (results.length < 1){
-				$("#output").append("Your search returned 0 results. Please try a different search term.");
+				$("#output").append("Your search for " + condition + " " + doctor + " returned 0 results. Please try a different search term.");
+			} else {
+				$("#output").append("Your search for " + condition + " " + doctor + "returned  " + results.length + " results");
 			}
-			
+
 			for (var i = 0; i < results.length; i++){
 				$("#output").append(`<li> ${results[i]} </li>`);
 			}

@@ -42,7 +42,6 @@ var Query = exports.Query = function () {
 
 						if (response.data[i].practices[0].accepts_new_patients) {
 							var patients = "Accepting New Patients";
-							console.log(patients);
 						} else {
 							var patients = "Not Accepting New Patients";
 						}
@@ -55,7 +54,7 @@ var Query = exports.Query = function () {
 
 						results.push('<strong>' + response.data[i].profile.first_name + " " + response.data[i].profile.last_name + '</strong>' + '<br>' + address.street + '<br>' + address.city + ', ' + address.state_long + '<br>' + "Phone: " + response.data[i].practices[0].phones[0].number + '<br>' + website + '<br>' + patients);
 					} //end for loop
-					console.log("results array: " + results);
+
 					_success(results);
 				},
 				error: function error(response) {
@@ -86,9 +85,11 @@ $(document).ready(function () {
 
 		newQuery.getQuery(function (results) {
 			$('#output').empty();
-			console.log(results);
+
 			if (results.length < 1) {
-				$("#output").append("Your search returned 0 results. Please try a different search term.");
+				$("#output").append("Your search for " + condition + " " + doctor + " returned 0 results. Please try a different search term.");
+			} else {
+				$("#output").append("Your search for " + condition + " " + doctor + "returned  " + results.length + " results");
 			}
 
 			for (var i = 0; i < results.length; i++) {
