@@ -16,21 +16,20 @@ export class Query {
 				console.log("API CONNECTED. You did it!");
 				let results = [];
 
-
 //push data returned from API into  array
-				console.log("response length : " + response.data.length);
 				for (var i = 0; i < response.data.length; i++){
 					let address = response.data[i].practices[0].visit_address;
+				
 
 					if (response.data[i].practices[0].accepts_new_patients){
 						var patients = "Accepting New Patients";
-						
+
 					} else {
 						var patients = "Not Accepting New Patients";
 					}
 
 					if (response.data[i].practices[0].website){
-						var website = response.data[i].practices[0].website;
+						var website = "<a href = \"response.data[i].practices[0].website\">Website</a>";
 					} else {
 						var website = "No Website Available";
 					}

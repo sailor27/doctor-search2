@@ -36,7 +36,6 @@ var Query = exports.Query = function () {
 					var results = [];
 
 					//push data returned from API into  array
-					console.log("response length : " + response.data.length);
 					for (var i = 0; i < response.data.length; i++) {
 						var address = response.data[i].practices[0].visit_address;
 
@@ -47,7 +46,7 @@ var Query = exports.Query = function () {
 						}
 
 						if (response.data[i].practices[0].website) {
-							var website = response.data[i].practices[0].website;
+							var website = "<a href = \"response.data[i].practices[0].website\">Website</a>";
 						} else {
 							var website = "No Website Available";
 						}
