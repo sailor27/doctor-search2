@@ -22,8 +22,23 @@ export class Query {
 				for (var i = 0; i < response.data.length; i++){
 					let address = response.data[i].practices[0].visit_address;
 
-					results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name + '<br>' + address.street + '<br>' + address.city + ', ' + address.state_long);
-				}
+					if (response.data[i].practices[0].accepts_new_patients){
+						var patients = "Accepting New Patients";
+						console.log(patients);
+					} else {
+						var patients = "Not Accepting New Patients";
+					}
+
+					if (response.data[i].practices[0].website){
+						var website = response.data[i].practices[0].website;
+					} else {
+						var website = "No Website Available";
+					}
+
+					results.push('<strong>' + response.data[i].profile.first_name  + " " + response.data[i].profile.last_name + '</strong>' + '<br>' + address.street + '<br>' + address.city + ', ' + address.state_long + '<br>' + "Phone: " + response.data[i].practices[0].phones[0].number + '<br>' + website + '<br>' + patients);
+
+
+				} //end for loop
 				console.log("results array: " + results);
 				success(results);
 	    },

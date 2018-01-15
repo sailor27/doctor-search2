@@ -12,6 +12,7 @@ $(document).ready(function() {
 
 
 		newQuery.getQuery(function(results) {
+			$('#output').empty();
 			console.log(results);
 			for (var i = 0; i < results.length; i++){
 				$("#output").append(`<li> ${results[i]} </li>`);
