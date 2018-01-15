@@ -13,6 +13,7 @@ $(document).ready(function() {
 
 		newQuery.getQuery(function(results) {
 			console.log(results);
+
 		},
 
 		function(error) {

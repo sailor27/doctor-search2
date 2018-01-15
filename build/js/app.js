@@ -36,10 +36,10 @@ var Query = exports.Query = function () {
 					console.log("API CONNECTED. You did it!");
 					var results = [];
 
-					//push data returned from API into one array
+					//push data returned from API into  array
 					console.log("response length : " + response.data.length);
 					for (var i = 0; i < response.data.length; i++) {
-						results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name);
+						results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name + " " + response.data[i].practices[0].visit_address.street);
 					}
 					console.log("results array: " + results);
 					_success(results);
