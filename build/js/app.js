@@ -39,7 +39,9 @@ var Query = exports.Query = function () {
 					//push data returned from API into  array
 					console.log("response length : " + response.data.length);
 					for (var i = 0; i < response.data.length; i++) {
-						results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name + " " + response.data[i].practices[0].visit_address.street);
+						var address = response.data[i].practices[0].visit_address;
+
+						results.push(response.data[i].profile.first_name + " " + response.data[i].profile.last_name + '<br>' + address.street + '<br>' + address.city + ', ' + address.state_long);
 					}
 					console.log("results array: " + results);
 					_success(results);
@@ -72,6 +74,9 @@ $(document).ready(function () {
 
 		newQuery.getQuery(function (results) {
 			console.log(results);
+			for (var i = 0; i < results.length; i++) {
+				$("#output").append('<li> ' + results[i] + ' </li>');
+			}
 		}, function (error) {
 			$('#output1').text('NO API CONNECTION. There was an error processing your search. Please try again.');
 		});
