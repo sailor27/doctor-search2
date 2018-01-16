@@ -46,7 +46,7 @@ var Query = exports.Query = function () {
 						}
 
 						if (response.data[i].practices[0].website) {
-							var website = "<a href = \"response.data[i].practices[0].website\">Website</a>";
+							var website = response.data[i].practices[0].website;
 						} else {
 							var website = "No Website Available";
 						}
@@ -94,6 +94,7 @@ $(document).ready(function () {
 			}
 
 			for (var i = 0; i < results.length; i++) {
+
 				$("#output2").append('<ul><li> ' + results[i] + ' </li></ul>');
 			}
 		}, function (error) {

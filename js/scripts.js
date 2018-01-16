@@ -19,7 +19,7 @@ export class Query {
 //push data returned from API into  array
 				for (var i = 0; i < response.data.length; i++){
 					let address = response.data[i].practices[0].visit_address;
-				
+
 
 					if (response.data[i].practices[0].accepts_new_patients){
 						var patients = "Accepting New Patients";
@@ -29,7 +29,7 @@ export class Query {
 					}
 
 					if (response.data[i].practices[0].website){
-						var website = "<a href = \"response.data[i].practices[0].website\">Website</a>";
+						var website = response.data[i].practices[0].website;
 					} else {
 						var website = "No Website Available";
 					}

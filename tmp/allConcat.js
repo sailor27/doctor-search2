@@ -23,6 +23,7 @@ $(document).ready(function() {
 			}
 
 			for (var i = 0; i < results.length; i++){
+
 				$("#output2").append(`<ul><li> ${results[i]} </li></ul>`);
 			}
 
