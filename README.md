@@ -14,7 +14,8 @@ This search tool queries the [Better Doctor](https://developer.betterdoctor.com/
 * Paste the API key into .env and export (see example)
 
 ```
-var apiKey = require('./../.env').apiKey;
+
+exports.apiKey = "[key goes here]";
 ```
 
 * Clone repository
