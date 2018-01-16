@@ -1,0 +1,51 @@
+.form-group{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: $paper;
+	border: 1px solid $pale-gold;
+	input{
+		color: $charcoal;
+		font-size: 1.25em;
+		
+		&:focus{
+			background-color: $pale-gold;
+			color: $paper;
+			font-weight: bold;
+		}
+
+	}
+	label{
+		width: 100%;
+		text-align: center;
+		color: $charcoal;
+		font-size: 1.25em;
+	}
+	.search-prompt{
+		width: 50%;
+	}
+}
+
+form{
+
+}
+
+.row{
+	align-items: center;
+	justify-content: center;
+}
+
+.btn {
+	background-color: $pale-gold;
+	color: $charcoal;
+	font-weight: bold;
+	font-size: 2em;
+	border: 2px solid $charcoal;
+	 &:hover{
+		 background-color: $charcoal;
+		 color: $paper;
+		 border: 2px solid $paper;
+	 }
+}

@@ -1,0 +1,23 @@
+// *:not(body):not(html) {
+//   box-sizing:border-box;
+//   border:3px dashed lightblue;
+// }
+
+body{
+	background-color: $silk;
+}
+
+
+.jumbotron{
+	text-align: center;
+	color: $paper;
+	a{
+		color: pink;
+		&:hover{
+			color: pink;
+			font-style: italic;
+		}
+	}
+	background-color: $charcoal;
+	border: 3px solid $paper;
+}
