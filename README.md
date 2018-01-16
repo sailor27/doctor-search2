@@ -7,8 +7,15 @@ This search tool queries the [Better Doctor](https://developer.betterdoctor.com/
 
 ## Setup/Installation
 
-* Visit [this page]()
- on github
+
+
+* Obtain an API key from [Better Doctor](https://developer.betterdoctor.com/)
+* Create a .env file in your project directory
+* Paste the API key into .env and export (see example)
+
+```
+var apiKey = require('./../.env').apiKey;
+```
 
 * Clone repository
 * Run $npm install in terminal
